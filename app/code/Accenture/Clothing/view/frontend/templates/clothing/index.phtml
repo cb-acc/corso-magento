@@ -1,0 +1,25 @@
+<?php
+    /**
+     *  Accenture view model
+     * @var $block \Magento\Framework\View\Element\Template
+     * @var $clothingLines \Accenture\Clothing\ViewModel\ClothingLines
+     */
+    $clothingLines = $block->getData('clothing_lines');
+?>
+<div>
+    <h3>Welcome in Clothing</h3>
+    <i style="font-size: 10px">this information comes from the clothing_lines table</i>
+    <p>
+        <span>in this section you will find the seasons:</span>
+        <span>
+            <?php
+            $collectionData = $clothingLines->getLines();
+            $lastIndex = count($collectionData) - 1;
+
+            foreach ($collectionData as $index => $item) {
+                echo $item['lines_name'] . ($index < $lastIndex ? ', ' : '. ');
+            }
+            ?>
+        </span>
+    </p>
+</div>

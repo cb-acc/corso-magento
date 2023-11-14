@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="content.info.accenture" template="Accenture_Clothing::product/view/info.phtml" before="product.info.detail" />
+        </referenceContainer>
+        <referenceContainer name="product.info.main">
+            <block name="product.info.accenture" template="Accenture_Clothing::product/view/accenture.phtml" before="-">
+            <arguments>
+                <argument name="product_additional_data" xsi:type="object">Accenture\Clothing\ViewModel\ProductAdditionalData</argument>
+            </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

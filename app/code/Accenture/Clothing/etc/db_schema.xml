@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+        <table name="clothing_lines" resource="default" comment="List of Clothing Lines for Accenture">
+            <column xsi:type="int" name="clothing_lines_id" identity="true" comment="Season Auto Increment" />
+            <column xsi:type="varchar" name="clothing_lines_name" length="1024" nullable="false" comment="Season Class Name" />
+            <constraint xsi:type="primary" referenceId="PRIMARY">
+                <column name="clothing_lines_id" />
+            </constraint>
+        </table>
+</schema>

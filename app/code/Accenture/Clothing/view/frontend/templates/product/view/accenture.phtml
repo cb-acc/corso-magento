@@ -1,0 +1,18 @@
+<?php
+
+/**
+ *  Accenture view model
+ * @var $block \Magento\Framework\View\Element\Template
+ * @var $productAdditionalData \Accenture\Clothing\ViewModel\ProductAdditionalData
+ */
+
+$productAdditionalData = $block->getData('product_additional_data');
+?>
+<?php if ($productAdditionalData->showAdditionalData() === "1") : ?>
+    <div>
+        <p>Current Season: <?= $productAdditionalData->getSeason("Estate")?></p>
+        <p>
+            <a href="<?= $block->getUrl('clothing/index/index')?>">scopri le nuove collezioni nella sezione dedicata</a>
+        </p>
+    </div>
+<?php endif; ?>

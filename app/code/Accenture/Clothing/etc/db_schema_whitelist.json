@@ -1,0 +1,11 @@
+{
+    "clothing_lines": {
+        "column": {
+            "clothing_lines_id": true,
+            "clothing_lines_name": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}
