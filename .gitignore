@@ -1,0 +1,14 @@
+.editorconfig
+.php-cs-fixer.dist.php
+.user.ini
+.idea
+.htaccess
+.htaccess.sample
+.env
+pub/
+setup/
+var/
+vendor/
+generated/
+lib/
+composer.lock

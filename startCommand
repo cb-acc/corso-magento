@@ -1,0 +1,11 @@
+warden svc up && warden env up
+warden env down && warden svc down
+
+warden db connect
+warden env exec db mysqldump -u magento -p magento > dumpdb.sql
+cat nomefile.sql | warden db import
+
+## Documentation
+
+https://docs.warden.dev/installing.html
+
